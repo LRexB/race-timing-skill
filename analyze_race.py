@@ -2,7 +2,7 @@
 import firebase_admin
 from firebase_admin import firestore
 
-debug = False
+debug = True
 
 def get_best_times() :
     best_time_list = {}
@@ -36,8 +36,6 @@ def get_best_times() :
 
 timeList = {}
 lapResults = {}
-
-
 raceResultData = get_best_times()
 for lapNumber in sorted(raceResultData.keys()) :
     lapResults = raceResultData[lapNumber]
